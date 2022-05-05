@@ -1,10 +1,9 @@
-import { FC } from "react";
-import { Sidebar } from "./components/Sidebar";
+import { Layout } from "./components/Layout";
 
-export const App: FC = () => {
+export const App = () => {
   return (
     <>
-      <Sidebar />
+      <Layout />
     </>
   );
 };
