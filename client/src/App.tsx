@@ -1,16 +1,10 @@
-import { useEffect } from "react";
-import { MyDropdown } from "./components/MyDropdown";
+import { FC } from "react";
+import { Sidebar } from "./components/Sidebar";
 
-export const App = () => {
-  useEffect(() => {
-    fetch("/users")
-      .then((res) => res.json())
-      .then((res) => console.log(res));
-  }, []);
-
+export const App: FC = () => {
   return (
-    <div className="text-center">
-      <MyDropdown />
-    </div>
+    <>
+      <Sidebar />
+    </>
   );
 };

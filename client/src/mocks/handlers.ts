@@ -1,14 +1,8 @@
 import { rest } from "msw";
-import { CustomerModel } from "./models/CustomerModel";
+import { createCustomer } from "./models/CustomerModel";
 
 export const handlers = [
-  rest.get("/users", (req, res, ctx) => {
-    const customers = [];
-
-    for (let i = 0; i < 100; i++) {
-      customers.push(CustomerModel);
-    }
-
-    return res(ctx.json(customers));
+  rest.get("/customers", (req, res, ctx) => {
+    return res(ctx.json(Array.from({ length: 1000 }, createCustomer)));
   }),
 ];
