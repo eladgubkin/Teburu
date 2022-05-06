@@ -1,7 +1,7 @@
 import faker from "@faker-js/faker";
 import { Customer } from "../../types/data.types";
 
-faker.setLocale("he");
+// faker.setLocale("he");
 
 export const createCustomer = (): Customer => ({
   id: faker.random.numeric(6),
