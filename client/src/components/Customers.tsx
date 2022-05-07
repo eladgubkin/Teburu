@@ -1,13 +1,44 @@
-import { useQuery } from "react-query";
+import { Table } from "./Table";
+import { TextEditor, Column } from "react-data-grid";
+
+interface Row {
+  id: number;
+  name: string;
+  email: string;
+  phoneNumber: string;
+}
+
+const columns: readonly Column<Row>[] = [
+  {
+    key: "id",
+    name: "Id",
+    width: 80,
+    resizable: true,
+    sortable: true,
+  },
+  {
+    key: "name",
+    name: "שם מלא",
+    editor: TextEditor,
+    sortable: true,
+    resizable: true,
+  },
+  {
+    key: "email",
+    name: "אימייל",
+    editor: TextEditor,
+    sortable: true,
+    resizable: true,
+  },
+  {
+    key: "phoneNumber",
+    name: "מס' טלפן",
+    editor: TextEditor,
+    sortable: true,
+    resizable: true,
+  },
+];
 
 export const Customers = () => {
-  const { data, isLoading } = useQuery("customers", fetch("/customers"));
-  console.log(data);
-
-  return (
-    <div>
-      <h1>Customers</h1>
-      <button onClick={() => console.log(data)}>Customers</button>
-    </div>
-  );
+  return <Table endpoint="/customers" columns={columns} />;
 };

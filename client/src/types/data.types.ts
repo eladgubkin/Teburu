@@ -1,10 +1,3 @@
-export interface Customer {
-  id: string;
-  name: string;
-  email: string;
-  phoneNumber: string;
-}
-
 export interface Request {
   id: number;
   title: string;

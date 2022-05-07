@@ -10,8 +10,11 @@
   "dependencies": {
     "@headlessui/react": "^1.6.1",
     "@heroicons/react": "^1.0.6",
+    "@linaria/core": "^3.0.0-beta.15",
     "react": "^18.0.0",
     "react-data-grid": "^7.0.0-beta.12",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18.0.0",
     "react-query": "^3.38.1",
     "react-router-dom": "^6.3.0"
