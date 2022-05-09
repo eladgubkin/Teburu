@@ -16,7 +16,9 @@ const customers = rest.get("/customers", (req, res, ctx) => {
     phoneNumber: faker.phone.phoneNumber(),
   });
 
-  return res(ctx.json(Array.from({ length: 50 }, createCustomer)));
+  const customers = Array.from({ length: 50 }, createCustomer);
+
+  return res(ctx.json(customers));
 });
 
 export const handlers = [customers];
