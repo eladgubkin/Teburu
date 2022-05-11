@@ -1,6 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
 import DataGrid, { SortColumn, SortIconProps } from "react-data-grid";
-import { Button } from "@mantine/core";
 
 const SortIcon = ({ sortDirection }: SortIconProps) => {
   return sortDirection !== undefined ? <>{sortDirection === "ASC" ? "\u2B9D" : "\u2B9F"} </> : null;
@@ -53,7 +52,7 @@ export const Table = ({ endpoint, columns }) => {
 
   return (
     <DataGrid
-      className=""
+      style={{ height: "100%" }}
       columns={columns}
       rows={sortedRows}
       rowKeyGetter={rowKeyGetter}
