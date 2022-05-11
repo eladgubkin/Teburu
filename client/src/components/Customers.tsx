@@ -40,5 +40,11 @@ const columns: readonly Column<Row>[] = [
 ];
 
 export const Customers = () => {
-  return <Table endpoint="/customers" columns={columns} />;
+  return (
+    <>
+      <div style={{ height: "100%" }}>
+        <Table endpoint="/customers" columns={columns} />
+      </div>
+    </>
+  );
 };
