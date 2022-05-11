@@ -9,10 +9,9 @@ import { Layout } from "./components/Layout";
 export const App = () => {
   return (
     <MantineProvider
-      emotionOptions={{ key: "mantine", stylisPlugins: [rtlPlugin] }}
+      // emotionOptions={{ key: "mantine", stylisPlugins: [rtlPlugin] }}
       theme={{
-        colorScheme: "dark",
-        dir: "rtl",
+        colorScheme: "light",
       }}
     >
       <Routes>
